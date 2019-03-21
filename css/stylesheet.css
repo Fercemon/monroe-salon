@@ -1,0 +1,553 @@
+/* comun settings */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5em;
+    background: transparent;
+    z-index: 2;
+}
+
+.header-dark{
+    background: #000;
+}
+
+.mobile-nav {
+    position: relative;
+}
+
+.menu {
+    color: #fff;
+    line-height: 5em;
+    padding-left: 2em;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6em;
+    border: 2px solid #fff;
+    padding: 0.5em;
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    cursor: pointer;
+}
+
+.overlay {
+    width: 100%;
+    height: 0;
+    text-align: center;
+    overflow-y: hidden;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.overlay a {
+    display: block;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding: 1em 0;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+
+/* home screen */
+
+.home-screen {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.background{
+    height: 100vh;
+    width: auto;
+    z-index: -1;
+}
+
+.mySlides{
+    display: none;
+    height: 100vh;
+    width: 100%;
+}
+
+.img1{
+    background-image: url(../img/back.png);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.img2{
+    background-image: url(../img/salon.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img3{
+    background-image: url(../img/curly.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.welcome {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dots{
+    position: absolute;
+    bottom: 7em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.down-btn {
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2em;
+    height: 4em;
+    border: 1px solid #BDD632;
+    border-radius: 50px;
+    padding-top: 0.5em;
+
+}
+
+.circle-btn {
+    border-radius: 50%;
+    background: #BDD632;
+    height: 1em;
+    width: 1em;
+    margin: 0 auto;
+    animation: scroll 1s ease-in-out infinite;
+}
+
+@keyframes scroll {
+    to{
+    margin-top: 2em;
+    }
+}
+
+
+/* products */
+
+
+
+.products {
+    padding: 0 1em;
+}
+
+.products-title {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.product-container {
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    margin: 1em 0;
+    padding-bottom: 1em;
+}
+
+.product-container:hover{
+    transform: scale(1.1);
+}
+
+.product-container h2{
+    padding: 0.3em 0;
+}
+
+.name,
+.price {
+    font-size: 1.2em;
+}
+
+.description{
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #77778D;
+}
+
+
+
+i::before {
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+
+.stars-outer {
+    display: inline-block;
+    position: relative;
+}
+
+.stars-outer::before {
+	font-family: "Font Awesome 5 free";
+	font-weight: 400;
+	content: "\f005 \f005 \f005 \f005 \f005";
+
+}
+
+.stars-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 100%;
+}
+
+.stars-inner::before {
+	content: "\f005 \f005 \f005 \f005 \f005";
+	font-family: "Font Awesome 5 Free";
+	color: #f8ce0b;
+	font-style: normal;
+	font-weight: 900;
+}
+
+.star2{
+    width: 93%;
+}
+
+.star3{
+    width: 80%;
+}
+
+.star4{
+    width: 95%;
+}
+
+.star5{
+    width: 91%;
+}
+
+/* treatments */
+
+.treatments {
+    background-image: url(../img/background-treatments.png);
+    background-size: cover;
+    background-position: bottom;
+    color: #fff;
+    text-align: center;
+}
+
+.treatments div {
+    padding: 1.5em 0;
+}
+
+.treatments h1 {
+    color: #BDD632;
+    font-size: 1.7em;
+}
+
+.treatments h2 {
+    font-size: 1.2em;
+}
+
+/* about */
+
+.about {
+    padding: 1em;
+    text-align: center;
+}
+
+.team-title {
+    margin: 1em 0;
+}
+
+.employee {
+    position: relative;
+    width: 100%;
+    margin: 2em 0;
+    background: #fff;
+}
+
+.employee img {
+    width: 100%;
+}
+
+.employee-name {
+    margin: 0.5em 0;
+}
+
+
+.employee-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+
+
+.employee-info p{
+    margin: 0 auto;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* contact */
+
+.contact {
+    background: #404040;
+    text-align: center;
+}
+
+.contact-title {
+    color: #7A7A7A;
+    padding-top: 2em;
+}
+
+.info {
+    padding: 2em 0;
+    color: #7A7A7A;
+}
+
+@media only screen and (min-width: 900px) {
+
+    /* header */
+
+    .mobile-nav{
+        display: none;
+
+    }
+
+    .desktop-nav{
+        display: block;
+        display: grid;
+        grid-template-columns: 5(1fr);
+        grid-template-areas:
+            "productsH treatmentsH logo aboutH contactH";
+        align-items: center;
+        text-align: center;
+    }
+    .desktop-nav a{
+        color: #fff;
+        font-size: 1.5em;
+    }
+
+    .productsH{
+        grid-area: productsH;
+    }
+
+    .treatmentsH{
+        grid-area: treatmentsH;
+    }
+
+    .logo{
+        grid-area: logo;
+        position: relative;
+    }
+
+    .aboutH{
+        grid-area: aboutH;
+        position: relative;
+    }
+
+    .contactH{
+        grid-area: contactH;
+    }
+
+
+    /* prdoucts */
+    .products {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.1fr 1fr 1fr;
+        grid-template-areas:
+            "products-title products-title products-title"
+            "product1 product2 product3"
+            "product4 product5 product6";
+        padding: 1em 0;
+        width: 60%;
+        margin: 0 auto;
+        column-gap: 1em;
+    }
+
+    .products-title {
+        grid-area: products-title;
+    }
+
+    .product1 {
+        grid-area: product1;
+    }
+
+    .product2 {
+        grid-area: product2;
+    }
+
+    .product3 {
+        grid-area: product3;
+    }
+
+    .product4 {
+        grid-area: product4;
+    }
+
+    .product5 {
+        grid-area: product5;
+    }
+
+    .product6 {
+        grid-area: product6;
+    }
+
+    /* treatments */
+    .girls{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.1fr 1fr;
+        grid-template-areas:
+            "girls-h1 girls-h1 girls-h1"
+            "t1 t2 t3";
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .girls-h1{
+        grid-area: girls-h1;
+    }
+
+    .t1{
+        grid-area: t1;
+    }
+
+    .t2{
+        grid-area: t2;
+    }
+
+    .t3{
+        grid-area: t3;
+    }
+
+    .guys{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 1fr;
+        grid-template-areas:
+            "guys-h1 guys-h1"
+            "t4 t5";
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .guys-h1{
+        grid-area: guys-h1;
+    }
+
+    .t4{
+        grid-area: t4;
+    }
+
+    .t5{
+        grid-area: t5;
+    }
+
+
+    /* about */
+
+
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.1fr 0.1fr 1fr;
+        grid-template-areas:
+            "team-title team-title team-title"
+            "team-text team-text team-text"
+            "employee1 employee2 employee3";
+        padding: 1em 0;
+        column-gap: 1em;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .team-title {
+        grid-area: team-title;
+    }
+
+    .team-text {
+        grid-area: team-text;
+    }
+
+    .employee1 {
+        grid-area: employee1;
+    }
+
+    .employee2 {
+        grid-area: employee2;
+
+    }
+
+    .employee3 {
+        grid-area: employee3;
+    }
+
+    .employee-text {
+        text-align: justify;
+    }
+
+
+
+
+
+
+}
